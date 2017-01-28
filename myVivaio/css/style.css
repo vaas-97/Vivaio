@@ -1,5 +1,96 @@
 /*Vivaio*/
+/*NAVBAR*/
+.navbar-static-top {
+    border-width: 1px;
+}
 
+.navbar-header{
+  border-radius: 3px;
+}
+h6 {
+  font-size: 50px;
+  color:red;
+}
+#footer{
+  padding:5px;
+}
+.featurette-heading{
+  margin-top: 0px;
+}
+.lead{
+  font-size: 20px;
+}
+.featurette-image{
+  padding-top: 50px;
+}
+.white{
+  background-color: white;
+  border-radius: 4px;
+}
+span{
+  color: #003399;
+}
+.blue{
+  color: #003399;
+}
+.sfo_blue{
+  background-color: #003399;
+}
+#navbar{
+  font-size: 18px;
+}
+#app{
+  display: none;
+}
+form #alert{
+  color:red;
+  width: 700;
+  font-family: italic;
+}
+.larg{
+  min-width: 300px;
+  height: 30px;
+}
+.test{
+  width: 300px;
+  height: 100px;
+}
+textarea{
+  width: 150px;
+  height: 50px;
+}
+h6{
+  color: red;
+  font-size: 25px;
+}
+table tr,table td{
+  word-wrap: break-word;
+}
+.text-muted{
+  font-size: 25px;
+  text-align: center;
+}
+.bord_top{
+  padding-top: 100px;
+}
+.form-control{
+  text-align: center;
+}
+.navbar-inverse .navbar-toggle {
+    border-color: #333;
+}
+.featurette-heading{
+  font-size: 33px;
+}
+.lead{
+  font-size: 17px;
+}
+#sfondo{
+  background-image: url("../img/sfondo.jpg");
+}
+.bord{
+  border-radius: 6px;
+}
 
 /*CENTRO IL TITOLO*/
 .titolo{
