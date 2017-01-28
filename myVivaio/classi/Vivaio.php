@@ -68,6 +68,15 @@ class Vivaio {
         return $cliente;
     }
 
+    public static function Login(array $post) {
+        // $user = self::_cleanString($post['user']);
+        // $password = self::_cleanString($post['password']);
+        $sqlString = "SELECT * FROM utenti WHERE nome={$get['user']} and parola={$get['password']}";
+
+        $cliente = $GLOBALS['db']->chiedi($sqlString)->fetch_assoc();
+        return $cliente;
+    }
+
     private static function _cleanString($string) {
         return str_replace("'", "''", $string);
     }
