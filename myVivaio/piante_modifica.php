@@ -35,7 +35,9 @@ include './templates/header.php';
     </table>
     <button type="submit">Aggiorna pianta</button>
 </form>
-
+<form method="" action="piante_aggiungi.php">
+    <button>Aggiungi pianta</button>
+</form>
 <!-- footer -->
 <?php
 include './templates/footer.php';
