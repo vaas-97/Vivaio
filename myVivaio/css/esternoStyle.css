@@ -1,0 +1,46 @@
+.wrapper{
+	 text-align: center;
+	 /*padding-top:10px;*/
+	 background-image: url(https://31.media.tumblr.com/f0d19d79ded8938201c961fe9571b0eb/tumblr_inline_nrhhjk9ltH1qid2nw_500.gif);
+	 padding:15px;
+	 box-shadow:2px 2px rgba(0,0,0,0.2);
+	 border: 0.5px dotted #8C7D63;
+	 /*width:75%;*/
+	 margin:0px auto;
+	 overflow: hidden;
+	 z-index: 999;
+	 position: relative;
+}
+
+.wrapperdue{
+	background-image: url(https://31.media.tumblr.com/f0d19d79ded8938201c961fe9571b0eb/tumblr_inline_nrhhjk9ltH1qid2nw_500.gif);
+	text-align: center; 
+	margin: auto;
+	overflow: hidden;
+	position: relative;
+	box-shadow:2px 2px rgba(0,0,0,0.2);
+	 border: 0.5px dotted #8C7D63;
+	z-index: 999;
+	width: 250px;
+	height: 700px;
+}
+
+
+.sfondo {
+	background-image: url(https://31.media.tumblr.com/f0d19d79ded8938201c961fe9571b0eb/tumblr_inline_nrhhjk9ltH1qid2nw_500.gif);
+	box-shadow:2px 2px rgba(0,0,0,0.2);
+	 border: 0.5px dotted #8C7D63;
+
+}
+
+
+
+
+
+.titolo{
+	font-family: "Barrio";
+	text-shadow: -2px 0px 3px rgba(150, 150, 150, 1);
+	font-size: 66px;
+	text-align: center;
+	color: #0f3c27;
+}
