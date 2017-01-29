@@ -109,8 +109,18 @@ insert into piante(nome, immagine, cod_cat)
 			("Rosa profumo di donna","rosaprofumodidonna.jpg",'7'),
 			("Rosa viola","rosaviola.jpg",'7');
 			
+
+drop table utenti;
 			
-			
+create table utenti(
+	pk_utente int not null auto_increment,
+	nome varchar(30),
+	parola varchar(30),
+	primary key (pk_utente)
+	)engine=innoDB;		
+	
+insert into utenti(nome, parola)
+	values("admin","admin");	
 	
 	
 	
