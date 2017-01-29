@@ -109,6 +109,7 @@ insert into piante(nome, immagine, cod_cat)
 			("Rosa profumo di donna","rosaprofumodidonna.jpg",'7'),
 			("Rosa viola","rosaviola.jpg",'7');
 			
+select * from piante;
 
 drop table utenti;
 			
