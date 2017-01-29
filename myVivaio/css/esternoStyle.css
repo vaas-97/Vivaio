@@ -44,3 +44,16 @@
 	text-align: center;
 	color: #0f3c27;
 }
+
+.passiflora {
+  margin:0px;
+  margin-left: 50px; 
+  background-image: url('http://i.imgur.com/d62H3Mf.png');
+  background-repeat: no-repeat;
+  width:auto;
+  height:auto;
+  background-color: none;
+  font-weight: normal;
+  color: #0f3c27; 
+  
+}
