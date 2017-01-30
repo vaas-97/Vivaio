@@ -1,7 +1,6 @@
 <html>
     <head>
         <title><?php echo $title;?></title>
-        <link rel="stylesheet" type="text/css" href="css/login.css">
-        <link rel="stylesheet" type="text/css" href="css/animate.css"> 
+        <link href="bootstrap/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>

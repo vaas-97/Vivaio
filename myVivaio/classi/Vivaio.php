@@ -4,11 +4,10 @@ class Vivaio {
 
     public static function AggiungiNuovo(array $post) {
         $nome = self::_cleanString($post['nome']);
-        $cognome = self::_cleanString($post['immagine']);
-        $email = self::_cleanString($post['categoria']);
+        $immagine = self::_cleanString($post['immagine']);
+        $categoria = self::_cleanString($post['categoria']);
         $sqlString = "INSERT INTO piante(nome,immagine,cod_cat)
-              VALUES('$nome','$cognome','$email')";
-        var_dump($sqlString);
+              VALUES('$nome','$immagine','$categoria')";
         try {
             $GLOBALS['db']->chiedi($sqlString);
             return true;
@@ -18,14 +17,13 @@ class Vivaio {
     }
 
     public static function Aggiorna(array $post) {
-        $clienteid = $post['piantaid'];
+        $piantaId = $post['piantaid'];
         $nome = self::_cleanString($post['nome']);
-        $cognome = self::_cleanString($post['immagine']);
-        $email = self::_cleanString($post['categoria']);
+        $immagine = self::_cleanString($post['immagine']);
+        $categoria = self::_cleanString($post['categoria']);
         $sqlString = "UPDATE piante " .
-                "SET nome='$nome',immagine='$cognome',cod_cat='$email' " .
-                "WHERE pk_pianta=$piantaid ";
-        var_dump($sqlString);
+                "SET nome='$nome',immagine='$immagine',cod_cat='$categoria' " .
+                "WHERE pk_pianta=$piantaId ";
         try {
             $GLOBALS['db']->chiedi($sqlString);
             return true;
@@ -64,17 +62,28 @@ class Vivaio {
         $sqlString = "SELECT * FROM piante WHERE pk_pianta={$get['piantaid']}";
 //        $piante = $GLOBALS['db']->chiedi($sqlString)->fetch_all(MYSQLI_ASSOC);
 //        return $piante[0];
-        $cliente = $GLOBALS['db']->chiedi($sqlString)->fetch_assoc();
-        return $cliente;
+        $pianta = $GLOBALS['db']->chiedi($sqlString)->fetch_assoc();
+        return $pianta;
+    }
+
+    public static function Elimina(array $get) {
+        $sqlString = "DELETE FROM piante WHERE pk_pianta={$get['piantaid']}";
+//        $piante = $GLOBALS['db']->chiedi($sqlString)->fetch_all(MYSQLI_ASSOC);
+//        return $piante[0];
+        $pianta = $GLOBALS['db']->chiedi($sqlString);
+        return $pianta;
     }
 
     public static function Login(array $post) {
-        // $user = self::_cleanString($post['user']);
-        // $password = self::_cleanString($post['password']);
-        $sqlString = "SELECT * FROM utenti WHERE nome={$get['user']} and parola={$get['password']}";
-
-        $cliente = $GLOBALS['db']->chiedi($sqlString)->fetch_assoc();
-        return $cliente;
+        $user = self::_cleanString($post['user']);
+        $password = self::_cleanString($post['password']);
+        $sqlString = "SELECT * FROM utenti WHERE nome=$user and parola=$password";
+        try {
+            $GLOBALS['db']->chiedi($sqlString);
+            return true;
+        } catch (Exception $e) {
+            return 'Errore: ' . $e->getMessage();
+        }
     }
 
     private static function _cleanString($string) {

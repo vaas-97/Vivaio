@@ -1,6 +1,9 @@
 <?php
 include_once './config/init.php';
-
+?>
+<link rel="stylesheet" type="text/css" href="css/login.css">
+<link rel="stylesheet" type="text/css" href="css/animate.css">
+<?php
 $title = 'Pagina di login';
 if (count($_POST) > 0) :
     $risultato = Vivaio::Login($_POST);
@@ -15,7 +18,7 @@ include './templates/header.php';
 <!-- contenuto pagina -->
 <div class="container">
         <div class="top">
-            <h1 id="title" class="hidden"><span id="logo">Passiflora <!-- <span>UI</span> --></span></h1>
+            <h1 id="title" class="hidden"><span id="logo">Passiflora</span></h1>
         </div>
         <form action="" method="">
             <div class="login-box animated fadeInUp">
@@ -32,7 +35,6 @@ include './templates/header.php';
                 <br/>
                 <button type="submit">Sign In</button>
                 <br/>
-                <!-- <a href="#"><p class="small">Forgot your password?</p></a> -->
             </div>
         </form>
     </div>
