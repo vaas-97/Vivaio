@@ -11,6 +11,7 @@
 
     <link href="bootstrap/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/esternoStyle.css"> 
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
   </head>
   <body>
 
@@ -21,62 +22,60 @@
 </div>
 
 <!-- INIZIO MENU -->
-<div class="wrapper">home contatti prodotti login</div>
+<nav class="navbar navbar-default">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div id="menu1">
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav">  
+                <li><a href="index.html">Home</a></li>
+                <li><a href="azienda.html">Chi siamo</a></li>
+                <li><a href="prodotti.php">Prodotti</a></li>
+                <li class="active"><a href="contatti.html">Contatti</a></li>
+                <li><a href="login.php">Login</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
 
 <!-- INIZIO BOX IMMAGINI -->
 <div class="container">
 
-<div style="margin-left: 450px; margin-top: 30px;">
+<div style=" margin-top: 30px;">
+    <form action="" method="POST">
+        <input type=hidden name="recipient" value="esempio@esempio.com">
+        <input type=hidden name="subject" value="Nuovo messaggio dal sito web!">
 
-<fieldset>
-<form id="" name="" action="" method="POST">
-<input id="" name="" value="" type="hidden">
-<div>
-    <label for=""> Nome *</label>
-    <input id="" name="" value="" type="text">
-</div>
-
-<div>
-    <label for="">Cognome *</label>
-    <input id="" name="" value="" type="text">
-</div>
-
-<div class="option">
-    <label for="">Genere *</label>
-        <div class="gender radio-pair">
-        <span>
-            <input id="gender1" name="gender" value="FEMALE" checked="checked" type="radio">
-            <label for="gender1">Femmina</label>
-        </span>
-        <span>
-            <input id="gender2" name="gender" value="MALE" type="radio">
-            <label for="gender2">Maschio</label>
-        </span>
-        </div>
-</div>
-
-<div>
-    <label for="email">Indirizzo e-mail *</label>
-    <input id="email" name="email" value="" type="email">
-</div>
-
-<div class="option">
-    <label for="subject">Oggetto</label>
-    <select id="subject" name="subject">
-        <option value="">Shopping Online</option>
-        <option value="">Assistenza</option>
-        <option value="">Richiesta Generica</option>
-    </select>
-</div>
-
-<div class="textbox">
-    <label for="query"> La tua domanda di informazioni *</label>
-    <textarea id="query" name="query"></textarea>
-</div>
-
-<div class="buttons">
-    <input name="contactUs" value="Invia" type="submit">
+        <table border="0" cellspacing="0" cellpadding="5" align="center">
+            <tr>
+                <td><b> Nome e Cognome:</b></td>
+                <td align="right"><input type=text name="realname"></td>
+            </tr>
+            <tr>
+                <td><b>Email:</b></td>
+                <td align="right"><input type=text name="email"></td>
+            </tr>
+                <td><b>Oggetto:</b></td>
+                <td align="right">
+                <select id="subject" name="subject" style="width:174px">
+                   <option value="">Shopping Online</option>
+                   <option value="">Assistenza</option>
+                   <option value="">Richiesta Generica</option>
+               </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><b>Messaggio:</b></td>
+            </tr>
+            <tr>
+                <td colspan="2"><textarea name="messaggio" cols="40" rows="5"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="Submit" value="Invia"></td>
+            </tr>
+        </table>
+        <input type=hidden name="required" value="email,realname,messaggio">
+    </form>
 </div>
 
 </div>

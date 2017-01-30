@@ -74,17 +74,6 @@ class Vivaio {
         return $pianta;
     }
 
-    public static function Login(array $post) {
-        $user = self::_cleanString($post['user']);
-        $password = self::_cleanString($post['password']);
-        $sqlString = "SELECT * FROM utenti WHERE nome=$user and parola=$password";
-        try {
-            $GLOBALS['db']->chiedi($sqlString);
-            return true;
-        } catch (Exception $e) {
-            return 'Errore: ' . $e->getMessage();
-        }
-    }
 
     private static function _cleanString($string) {
         return str_replace("'", "''", $string);

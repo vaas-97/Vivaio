@@ -5,9 +5,6 @@ include_once './config/init.php';
 <link rel="stylesheet" type="text/css" href="css/animate.css">
 <?php
 $title = 'Pagina di login';
-if (count($_POST) > 0) :
-    $risultato = Vivaio::Login($_POST);
-endif;
 ?>
 
 <!-- header -->
